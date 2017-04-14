@@ -1,5 +1,4 @@
-# import itertools
-import copy
+import subprocess, sys
 
 file = open('8charpass.txt', 'w')
 
@@ -17,7 +16,10 @@ def append(string, times):
         if (charCount <= repeatThreshold):
             newString = string + char
             if (times == length):
-                file.write(newString + '\n')
+                # file.write(newString + '\n')
+                # subprocess.call(['echo', newString])
+                p = subprocess.Popen(['echo', newString], stdout=subprocess.PIPE)
+                output = p.stdout.read()
             if (times < length):
                 append(newString, times + 1)
 
