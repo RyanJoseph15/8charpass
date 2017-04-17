@@ -15,7 +15,8 @@
                 "WaitOnAbnormalExit",
                 "WaitOnNormalExit",
                 "RedirectOutput"
-            ]
+            ],
+            "args": ["-f C:/Users/Ryan/Documents/GitHub/8charpass/8charpass/params.txt"]
         },
         {
             "name": "PySpark",
